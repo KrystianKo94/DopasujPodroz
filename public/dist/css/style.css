@@ -1,0 +1,135 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star-rating {
+    margin: 20px;
+    text-decoration: none;
+    height: 20px;
+    line-height: 100%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    background: #eee;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #eee 0%, #b9bdbe 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eee), color-stop(100%, #b9bdbe));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #eee 0%, #b9bdbe 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #eee 0%, #b9bdbe 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #eee 0%, #b9bdbe 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #eee 0%, #b9bdbe 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eee', endColorstr='#b9bdbe',GradientType=0 );
+    /* IE6-9 */
+}
+.star-rating .star-bg {
+    width: 0px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #ffc107;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ffc107 0%, #ffc107 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffc107), color-stop(100%, #ffc107));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffc107 0%, #ffc107 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffc107 0%, #ffc107 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffc107 0%, #ffc107 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #ffc107 0%, #ffc107 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc107', endColorstr='#982323',GradientType=0 );
+    /* IE6-9 */
+}
+.star-rating .stars {
+    position: relative;
+    z-index: 2;
+    *zoom: 1;
+}
+.star-rating .stars:before, .star-rating .stars:after {
+    content: " ";
+    display: table;
+}
+.star-rating .stars:after {
+    clear: both;
+}
+.star-rating .stars i {
+    width: 22px;
+    padding-bottom: 22px;
+    background: #fff;
+    float: left;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADK0lEQVRogd2azUtUURjGf+P4kSLhokW1cONXmWS5lRYuxVrXtn+kRduCIhBaREJCoSAWitsgXEmRfSg5GkGrFi0qDEzNp8V9baZxPs453TONPXCYOzPv+z7Pc9977j137mQkif8ADTXg2LYRFbUw8sBGVGQiH1q7QK9t54DGWESxOzIJfLAxGZMoZkd2gdPAhr3vAt4RqSsxO/KIvAmA98DDWGSxOvIT6CeZF4XoBVaBbNqEsToyxUET2GdTMQhjdGQPOEMyH0rhFLBCyjsxRkemKW8C+246bdK0O7IHDAJvq8QNAK9IcUem3ZEZqpvAYmbSJE6zIwLOAa8d488Cy0AmDfI0OzKLuwks9nFa5Gl1RMAQyR72wXngBSl0Ja2OzOFvAuCl5f41fDvyCVgjWXrk7HXdtn8EamghueL3AN223Q30Acddi5Qy8rlA3LqNfeGbgWJD0U7eWI+NfdPHCgMzkjaAa+TFfqmp1HB0kDd5vYFkeT0ALHF4TECidYlEexfK46akjCQO0bixL77QiCTdOSRmMqb1N4qNSNLdOjeTMY1/oJQRSZqQlK0D0cUjK+l+KcHljEjSZJ2ZyZqmkqhkRJKmJDXVgYkm01IW1YxI0qyk5n9ootk0VISLEUmal9TyD0y0SJpzEei6aBwDngBtsa5uJdBmnBddgn0XjU+BS8D3AGE+aAPmgRHXBN9l/Agw7pkTgnE8TEDY/cjXgJzoHCFGVgJyfLHqmxBi5E1ATnSOkHv2DuIfXkd9OXw78tGXIBDfjMsZvkZcfnxLC15cvkZqMdGDuHyN1GKiB3H5PgbzPS02Aldte4LkcVwcLsdFoyTtSmp1XOw1SLosKVeQn5N0xb5zqdFqnE7wMbLmKGBM0nKFOssW41IrV6bGAfjMkWqT7wKwSLLYG6wQN2gxi5ZTCc5nLh8j5SbfELAAPAOGPeoNW86C1SiFKEaKJ18fySO058CoR51ijFqNaatZCPdTsMcc6bfjtlPSPUk7Hrmu2LHancbV75roamRb0glJtyVt+aoLwJakW5JOGndVuC4at0iuAe3OrU4HmyTXoiPVAmP/O6hm+AX1PaP35FH3XAAAAABJRU5ErkJggg==');
+    background-size: contain;
+    display: block;
+}
+
+.star-rating.-small { height: 16px; }
+.star-rating.-small .stars i {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.star-rating.-large { height: 28px; }
+.star-rating.-large .stars i {
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+
+}
+
+.star-rating.-x-large { height: 35px; }
+.star-rating.-x-large i {
+    font-size: 35px;
+    width: 35px;
+    height: 35px;
+}
+
+
+.logo-main{
+    width: 300px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    height: 100vh;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+.logo-main .logo {
+    height: 75px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #4272d7;
+    padding: 0 35px;
+}
+
+
+
